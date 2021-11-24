@@ -27,25 +27,25 @@ function calculateMax(e) {
 
     // ERROR DISPLAY
     if(reps.length === 0 && weight.length === 0) {
-        showError('ENTER CALCULATED VALUES!');
+      showError('ENTER CALCULATED VALUES!');
     } else {
-    
-    // REPITIONS EQUATION
-    var repitions = parseFloat((reps/30) + 1);
+      // REPITIONS EQUATION
+      var repitions = parseFloat((reps/30) + 1);
 
-    // APPENDED CONTENT
-    var weightList = document.createElement('p');
-    weightList.innerText = (repitions * weight).toFixed(1) + ' LBPS';
-    results.classList.add('result');
-    weightList.classList.add('text-hover', 'lb')
-    results.appendChild(weightList);
-    
-    // DELETE ICON
-    var trashIcon = document.createElement('i');
-    trashIcon.classList.add('trash-icon');
-    trashIcon.innerHTML = '<i class="fa fa-trash"></i>';
-    results.appendChild(trashIcon);
+      // APPENDED CONTENT
+      var weightList = document.createElement('p');
+      weightList.innerText = (repitions * weight).toFixed(1) + ' LBPS';
+      results.classList.add('result');
+      weightList.classList.add('text-hover', 'lb')
+      results.appendChild(weightList);
+      
+      // DELETE ICON
+      var trashIcon = document.createElement('i');
+      trashIcon.classList.add('trash-icon');
+      trashIcon.innerHTML = '<i class="fa fa-trash"></i>';
+      results.appendChild(trashIcon);
     }
+
     // CONVERT FROM KG TO LBPS BACK AND FORTH
     weightList.addEventListener('click', function(){
       if(weightList.classList.contains('lb')){
@@ -57,13 +57,13 @@ function calculateMax(e) {
       }
     })
 
+    // TRASH ICON AND REMOVING THE CALCULATED WEIGHT FROM UI
     trashIcon.addEventListener('click', function() {
         results.removeChild(weightList);
         results.removeChild(trashIcon);
         results.classList.remove('result');
     })
-  
-  };
+  }; 
 
 // FUNCTION SHOW ERROR TO USER
 function showError(error){
@@ -78,11 +78,13 @@ function showError(error){
   errorDiv.className = 'alert alert-danger';
   errorDiv.appendChild(document.createTextNode(error));
 
-  // CLEAR ERROR MESSAGE AUTOSMATICALLY IN THREE SECONDS
+  container.insertBefore(errorDiv, heading);
+
+  // CLEAR ERROR MESSAGE AUTOMATICALLY IN THREE SECONDS
   setTimeout(clearError, 3000);
 }
 
 // CLEAR ERROR FUNCTION FOR CALL BACK IN THE MAX CALCULATORS
 function clearError(){
-  document.querySelector('.alSert').remove();
+  document.querySelector('.alert').remove();
 }
