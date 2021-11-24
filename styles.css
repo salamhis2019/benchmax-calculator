@@ -230,6 +230,10 @@ h2 {
     margin: 0 auto;
   }
 
+  .note {
+    width: 375px;
+  }
+
   .note-header {
     text-align: center;
     margin-left: 40px;
