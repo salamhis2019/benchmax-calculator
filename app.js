@@ -2,7 +2,8 @@ const button = document.getElementById('button');
 
 button.addEventListener('click', calculateMax);
 
-function calculateMax() {
+function calculateMax(e) {
+  e.preventDefault();
 
     // DEFLINE UI ELEMENTS
     const weight = document.getElementById('weight').value;
@@ -21,7 +22,7 @@ function calculateMax() {
     var weightList = document.createElement('p');
     weightList.innerText = (repitions * weight).toFixed(1) + ' LBPS';
     results.classList.add('result');
-    weightList.classList.add('text-hover')
+    weightList.classList.add('text-hover', 'lb')
     results.appendChild(weightList);
     // DELETE ICON
     var trashIcon = document.createElement('i');
@@ -30,21 +31,31 @@ function calculateMax() {
     results.appendChild(trashIcon);
     }
 
+    // weightList.addEventListener('click', function(){
+    //   weightList.innerText = ((weight * repitions) / 2.205).toFixed(1) + ' KG';
+    // })
     weightList.addEventListener('click', function(){
-        // weightList.style.textDecoration = "line-through";
+      if(weightList.classList.contains('lb')){
         weightList.innerText = ((weight * repitions) / 2.205).toFixed(1) + ' KG';
+        weightList.classList.remove('lb');
+      } else {
+        weightList.innerText = (repitions * weight).toFixed(1) + ' LBPS';
+        weightList.classList.add('lb');
+      }
     })
 
-    weightList.addEventListener('dblclick', function(){
-        results.removeChild(weightList);
-        results.classList.remove('result')
-    })
+    // weightList.addEventListener('dblclick', function(){
+    //     results.removeChild(weightList);
+    //     results.classList.remove('result');
+    // })
 
     trashIcon.addEventListener('click', function() {
         results.removeChild(weightList);
         results.removeChild(trashIcon);
         results.classList.remove('result');
     })
+
+    saveResults(weightList.value);
 };
 
 // Show Error
