@@ -170,6 +170,12 @@ body {
 .trash-icon {
   cursor: pointer;
   color: red;
+  transition: 0.2s ease;
+}
+
+.trash-icon:hover {
+  cursor: pointer;
+  color: black;
 }
 
 .alert {
@@ -260,7 +266,5 @@ h2 {
 
   .note-header {
     text-align: center;
-  }
-
-  
+  } 
 }
