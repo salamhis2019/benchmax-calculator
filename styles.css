@@ -216,9 +216,9 @@ h2 {
 }
 
 @media only screen and (max-width: 500px) {
+  /* BANNER EDITS */
   #banner {
     text-align: center;
-    margin-left: 100px;
   }
 
   .banner-header {
@@ -226,29 +226,41 @@ h2 {
     text-align: center;
   }
 
-  #container {
-    margin: 0 auto;
+  .banner-img {
+    width: 50%;
+    margin-top: -40px;
   }
 
+  .banner-content {
+    margin: 0 30px 30px 30px;
+  }
+
+  /* CONTAINER EDITS */
+
+  #container {
+    width: 380px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+      font-size: 4em;
+    }
+
+  /* RESULTS EDITS */
+
+    #results {
+      width: 40vh;
+    }
+
+  /* NOTE EDITS */
+
   .note {
-    width: 375px;
+    width: 40vh;
   }
 
   .note-header {
     text-align: center;
-    margin-left: 40px;
   }
 
-  .heading {
-    font-size: 4em;
-  }
-
-  .banner-img {
-    text-align: center;
-    margin-right: 50px;
-  }
-
-  p {
-    text-align: center;
-  }
+  
 }
