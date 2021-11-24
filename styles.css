@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(77, 160, 255);
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 20, 133, 0.836),
+      rgba(76, 103, 255, 0.678)
+    ),
+    url(images/dark-honeycomb.png);
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.heading {
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+  font-size: 4.5em;
+  font-weight: 900;
+  color: rgb(76, 103, 255);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.925);
+}
+
+/* BANNER EDITS */
+
+#banner {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.banner-header {
+  font-family: "Bebas Neue", cursive;
+  font-size: 8em;
+  margin-top: 1em;
+  color: white;
+  text-shadow: 2px 3px 1px black;
+}
+
+.banner-content {
+  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px black;
+  font-weight: 700;
+}
+
+.banner-img {
+  width: 300px;
+  margin-top: -50px;
+}
+
+/* CALCULATOR EDITS */
+
+.content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.815);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+  background-color: white;
+  border: 4px solid rgb(77, 160, 255);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.747);
+  padding: 2em;
+  width: 60vh;
+}
+
+#input-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.5em;
+  margin: 01em auto;
+  width: 300px;
+}
+
+.input {
+  height: 4em;
+  border-radius: 2.5em;
+  border: 2px solid rgba(0, 0, 0, 0.281);
+  transition: 0.2s ease-out;
+}
+
+.input:hover {
+  border: 2px solid rgb(77, 160, 255);
+}
+
+.input[type="number"] {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+/* BUTTON STYLES */
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1em;
+  border: 2px solid rgba(0, 20, 133, 0.712);
+  border-radius: 2.5em;
+  width: 450px;
+  height: 4em;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  background: rgba(47, 78, 255, 0.918);
+  color: white;
+  transition: 0.3s;
+}
+
+#button:hover {
+  background: rgb(0, 20, 133);
+}
+
+.caption {
+  font-size: 2em;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
+
+/*
+  APPENDED CONTAINER STYLES
+*/
+
+#results {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: 0.3em;
+  font-family: "Bebas Neue", cursive;
+  align-items: center;
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+  background: white;
+  width: 500px;
+  margin: 1.5em auto;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.result {
+  padding: 1em 0;
+  transition: 0.2 ease;
+}
+
+.text-hover {
+  transition: 0.2s ease;
+}
+
+.text-hover:hover {
+  color: rgb(255, 68, 68);
+}
+
+.trash-icon {
+  cursor: pointer;
+  color: red;
+}
+
+.alert {
+  background: rgb(255, 81, 81);
+  color: white;
+  padding: 0.5em;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+}
+
+/* RESULTS TEXT EDITS */
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 2em;
+  color: white;
+  font-size: 2em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.note {
+  box-sizing: border-box;
+  width: 500px;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+  line-height: 2;
+  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  background: white;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1500px) {
+  #button {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #banner {
+    text-align: center;
+    margin-left: 100px;
+  }
+
+  .banner-header {
+    font-size: 4.5em;
+    text-align: center;
+  }
+
+  #container {
+    margin: 0 auto;
+  }
+
+  .note-header {
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .heading {
+    font-size: 4em;
+  }
+
+  .banner-img {
+    text-align: center;
+    margin-right: 50px;
+  }
+
+  p {
+    text-align: center;
+  }
+}

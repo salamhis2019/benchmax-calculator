@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+    </style>
+    <title>Bench Max Calculator</title>
+</head>
+<body>
+    <section id="banner">
+        <h1 class="banner-header">One rep Max Calculator</h1>
+        <img class="banner-img" src="images/barbell.png" alt="barbell image">
+        <p class="banner-content">The One Rep Max Calculator gives you an accurate estimate on how much you would able to lift for one 
+            repition based on a formula. It is intended to get an idea of what one can do with the given repitions and weight 
+            lifted. 
+        </p>
+    </section>
+    <div id="container">
+        <div id="error-container"></div>
+        <h1 class="heading">Calculate your Max</h1>
+        <p class="content">Insert Values Below:</p>
+        <div id="input-container">
+            <span class="caption"></span><input class="input" type="number" placeholder="Weight" id="weight">
+            <span class="caption"></span><input class= "input" type="number" placeholder="Reps" id="reps">
+        </div>        
+        <button id="button">Calculate</button>
+    </div>
+    <h2 class="note-header">View Results Below:</h2>
+    <div class="note">
+        <i class="fa fa-exclamation-circle" style="font-size:36px"></i>        
+        <p class="note-text">Click on your results in pounds to convert to Kilograms!</p>
+    </div>
+    <div id="results"></div>
+    <script src="app.js"></script>
+</body>
+</html>
