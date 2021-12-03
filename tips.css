@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY STYLE EDITS */
+
+body {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.349), rgba(8, 33, 145, 0.541)), url(images/light_honeycomb.png);
+    background-repeat: none;
+    min-height: 100vh;
+}
+
+/* LOGO AREA EDITS */
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+#banner {
+    background: linear-gradient(
+        to bottom,
+        #001485d5,
+        #4c67ffad
+        ),
+        url(images/dark-honeycomb.png);
+    background-size: cover;
+    background-position: center;
+    }
+
+/* NAVIAGTION STYLES */
+
+#nav ul{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #001485;
+    border-top: 2px solid #fafafa;
+}
+
+.nav-items {
+    list-style-type: none;
+    width: 100%;
+    padding: 5px 0;
+    transition: 0.3s ease;
+    color: #fafafa;
+}
+
+.nav-items:hover {
+    background-color: #fafafa;
+    color: #4da0ff;
+}
+
+.tags {
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;    
+    font-size: 1.8em;
+    width: 100%;
+}
+
+/* WHOLE PAGE EDITS */
+
+#tips-page {
+    margin: 3em 3em;
+}
+
+/* MINDSET EDITS */
+
+#mindset {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin: 0 auto;
+    padding: 0.5em 0;
+    text-shadow: 2px 1px 3px black;
+    width: 400px;
+    font-family: 'Oswald', sans-serif;    
+    font-size: 4em;
+    font-weight: 700;
+    text-align: center;
+    color: #f7f7f7;
+    text-transform: uppercase;
+}
+
+.mindset-container {
+    background: #f7f7f7;
+    padding: 2em;
+    margin: 3em 0;
+    border: 4px solid #001485;
+    box-shadow: 2px 2px 3px black;
+
+}
+
+h3 {
+    font-size: 2.5em;
+    font-family: 'Oswald', sans-serif;    
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 2.5em;
+    font-family: 'Oswald', sans-serif;    
+    color: #001485;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;  
+    font-weight: 600;  
+}
+
+.page-content {
+    font-size: 1.2em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+
+.mindset-numbers {
+    text-transform: uppercase;
+    color: black;
+    margin: 0.5em 0;
+}
+
+/* WORKOUTS STYLE EDITS */
+
+#workouts {
+    width: 1200px;
+    margin: 3em auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.column {
+    background: #fafafa;
+    margin: 0 0.5em;
+    padding: 1em;
+    border: 4px solid #001485;
+    box-shadow: 2px 2px 3px black;
+    max-height: 100vh;
+}
+
+.workout-columns {
+    text-align: left;
+}
+
+/* DIET STYLES */
+
+#row-container {
+    display: grid;
+    row-gap: 1em;
+}
+
+#diet {
+    width: 1200px;
+    margin: 3em auto;
+}
+
+.row {
+    background: white;
+    padding: 2em;
+    border: 4px solid #001485;
+    box-shadow: 2px 2px 3px black;
+}
+
+.diet-header {
+    text-transform: uppercase;
+}
+
+/* CALCULATE BENCH MAX AREA */
+
+
+#btn {
+    display: block;
+    width: 700px;
+    margin: 3em auto;
+    background: #001485;
+    border: 4px solid #fafafa;
+    box-shadow: 2px 2px 3px black;
+    color: #fafafa;
+    text-align: center;
+    padding: 1.2em;
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;  
+    text-transform: uppercase;
+    border-radius: 1.5em;
+    transition: 0.2s;
+}
+
+#btn:hover {
+    background-color: #fafafa;
+    color: #001485;
+    transform: scale(1.05);
+    text-decoration: underline;
+}
