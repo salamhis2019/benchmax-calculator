@@ -246,6 +246,18 @@ h5 {
     #diet {
         width: 100%;
     }
+
+    #btn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    #workouts {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 1em;
+    }
 }
 
 /* MEDIA SCREEN EDITS FOR MOBILE */
