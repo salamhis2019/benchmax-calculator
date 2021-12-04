@@ -17,12 +17,18 @@
     <title>Bench Max Calculator</title>
 </head>
 <body>
-    <section id="banner">
+
+    <!-- BANNER SECTION STRUCTURE -->
+
+    <div id="banner">
         <h1 class="banner-header">One rep Max Calculator</h1>
         <img class="banner-img" src="images/barbell.png" alt="barbell image">
         <p class="banner-content">The One Rep Max Calculator gives you an accurate estimate on how much you would able to lift for one repition based on a formula. It is intended to get an idea of what one can do with the given repitions and weight lifted. 
         </p>
-    </section>
+    </div>
+
+    <!-- CALCULATE ERROR CONTAINER STRUCTURE -->
+
     <div id="container">
         <div id="error-container"></div>
         <h1 class="heading">Calculate your Max</h1>
@@ -33,13 +39,22 @@
         </div>        
         <a href="#note" id="button">Calculate</a>
     </div>
+
+    <!-- NOTE + APPENDED RESULTS STRUCTURE -->
+
     <h2 id="note" class="note-header">View Results Below:</h2>
     <div class="note">
         <i class="fa fa-exclamation-circle" style="font-size:36px"></i>        
         <p class="note-text">Click on your results in pounds to convert to Kilograms!</p>
     </div>
     <div id="results"></div>
+
+   <!-- TIPS BUTTON STRUCTURE -->
+    
     <a href="tips.html" id="btn">Tips on how to get stronger!</a>
+
+    <!-- JS SCRIPT TAG -->
+
     <script src="app.js"></script>
 </body>
 </html>

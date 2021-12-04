@@ -33,14 +33,6 @@ body {
 
 /* NAVIAGTION STYLES */
 
-#hamburger {
-    transition: 0.3s ease;
-}
-
-.button-container {
-    display: none;
-}
-
 #nav .links{
     display: flex;
     justify-content: space-around;
@@ -70,7 +62,13 @@ body {
     width: 100%;
 }
 
+#hamburger {
+    transition: 0.3s ease;
+}
 
+.button-container {
+    display: none;
+}
 
 .fa-align-justify {
     color: white;
@@ -228,21 +226,7 @@ h5 {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 1300px) {
-    #mindset {
-        display: flex;
-        flex-direction: column;
-        width: 1200px;
-    }
-
-    #workouts {
-        width: 1200px;
-    }
-
-    #diet {
-        width: 1200px;
-    }
-}
+/* MEDIA SCREEN EDITS FOR LARGER SCREENS */
 
 @media only screen and (min-width: 501px) and (max-width: 1300px){
     .page-content {
@@ -264,9 +248,11 @@ h5 {
     }
 }
 
-
+/* MEDIA SCREEN EDITS FOR MOBILE */
 
 @media only screen and (max-width: 500px) {
+
+    /* WHOLE PAGE EDITS */
 
     #tips-page {
         margin: 0.5em;
@@ -276,7 +262,7 @@ h5 {
         font-size: 1.2em;
     }
 
-    /* NAV */
+    /* NAV EDITS*/
 
     #nav {
         background: #001485;
@@ -322,7 +308,8 @@ h5 {
     }
     
 
-    /* MINDSET PAGE */
+    /* MINDSET PAGE EDITS */
+
     #mindset {
         width: 360px;
     }
@@ -330,7 +317,6 @@ h5 {
     .section-header {
         width: 360px;
     }
-    
     
     /* WORKOUTS EDITS */
 
@@ -358,4 +344,4 @@ h5 {
         width: 360px;
         font-size: 1.5em;
     }
-  }
+}
