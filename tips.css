@@ -33,7 +33,15 @@ body {
 
 /* NAVIAGTION STYLES */
 
-#nav ul{
+#hamburger {
+    transition: 0.3s ease;
+}
+
+.button-container {
+    display: none;
+}
+
+#nav .links{
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -60,6 +68,21 @@ body {
     text-transform: uppercase;    
     font-size: 1.8em;
     width: 100%;
+}
+
+
+
+.fa-align-justify {
+    color: white;
+    margin: 10px;
+    display: none;
+    transition: 0.2s ease-in;
+}
+
+.fa-remove {
+    color: white;
+    margin: 10px;
+    transition: 0.2s ease;
 }
 
 /* WHOLE PAGE EDITS */
@@ -204,3 +227,135 @@ h5 {
     transform: scale(1.05);
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 1300px) {
+    #mindset {
+        display: flex;
+        flex-direction: column;
+        width: 1200px;
+    }
+
+    #workouts {
+        width: 1200px;
+    }
+
+    #diet {
+        width: 1200px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1300px){
+    .page-content {
+        font-size: 1em;
+    }
+
+    #mindset {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #workouts {
+        width: 100%;
+    }
+
+    #diet {
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+    #tips-page {
+        margin: 0.5em;
+    }
+
+    .page-content {
+        font-size: 1.2em;
+    }
+
+    /* NAV */
+
+    #nav {
+        background: #001485;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: right;
+    }
+
+    .nav-toggle {
+        background-color:#001485;
+        text-align: right;
+        border: none;
+    }
+
+    #nav .links {
+        display: block;
+        grid-template-columns: 1fr;
+        text-align: left;
+        padding-left: 1em;
+        transition: 0.3s ease-in;
+    }
+
+    .links {
+        height: 0;
+        overflow: hidden;
+        transition: 0.3 ease;
+    }
+
+    .show-links {
+        height: 205px;
+    }
+
+    .tags.show {
+        display: block;
+    }
+
+    .fa-align-justify {
+        color: white;
+        margin: 10px;
+        display: block;
+    }
+    
+
+    /* MINDSET PAGE */
+    #mindset {
+        width: 360px;
+    }
+
+    .section-header {
+        width: 360px;
+    }
+    
+    
+    /* WORKOUTS EDITS */
+
+    #workouts {
+        grid-template-columns: 1fr;
+        row-gap: 1em;
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .column {
+        margin: 0;
+        padding: 1em;
+    }
+
+    /* DIET SECTION */
+
+    #diet {
+        width: 360px;
+    }
+
+    /* CALULATE SECTION */
+
+    #btn {
+        width: 360px;
+        font-size: 1.5em;
+    }
+  }

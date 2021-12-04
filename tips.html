@@ -21,16 +21,22 @@
 </head>
 <body>
     <section id="banner">
-        <img  class="logo" src="images/barbell.png" alt="">
+        <img  class="logo" src="images/barbell.png" alt="banner image">
     </section>
     <nav id="nav">
-        <ul>
+        <div class="button-container">
+            <button class="nav-toggle">
+                <i class="fa fa-align-justify" style="font-size:36px;"></i>
+            </button>            
+        </div>
+        <ul class="links">
             <li class="nav-items"><a class="tags" href="#mindset">Mindset</a></li>
             <li class="nav-items"><a class="tags" href="#workout-section">Workouts</a></li>
             <li class="nav-items"><a class="tags" href="#diet">Diet</a></li>
             <li class="nav-items"><a class="tags" href="#btn">Calculate</a></li>
         </ul>
     </nav>
+    <div id="hamburger"></div>
     <section id="tips-page">
         <section id="mindset">
             <h1 class="section-header">Mindset</h1>
@@ -91,4 +97,5 @@
         </section>
         <a href="index.html" id="btn">Click here to calculate your bench max</a>
     </section>  
+    <script src="tips.js"></script>
 </body>
