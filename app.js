@@ -46,6 +46,15 @@ function calculateMax(e) {
       results.appendChild(trashIcon);
     }
 
+    // SMOOTH SCROLL FOR CALCULATE BUTTON
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior : "smooth"
+        });      
+      });
+    });
+    
     // CONVERT FROM KG TO LBPS BACK AND FORTH
     weightList.addEventListener('click', function(){
       if(weightList.classList.contains('lb')){
@@ -81,7 +90,7 @@ function showError(error){
   container.insertBefore(errorDiv, heading);
 
   // CLEAR ERROR MESSAGE AUTOMATICALLY IN THREE SECONDS
-  setTimeout(clearError, 3000);
+  setTimeout(clearError, 5000);
 }
 
 // CLEAR ERROR FUNCTION FOR CALL BACK IN THE MAX CALCULATORS
